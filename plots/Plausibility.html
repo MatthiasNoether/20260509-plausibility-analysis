@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demographie Dashboard - Kennzahlen</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #3498db;
+            --bg: #f4f7f6;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* Sidebar Navigation */
+        nav {
+            width: 250px;
+            height: 100vh;
+            background: var(--primary);
+            color: white;
+            position: fixed;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        nav h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--accent);
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            border-left: 4px solid transparent;
+        }
+
+        nav a:hover {
+            background: var(--secondary);
+            border-left: 4px solid var(--accent);
+        }
+
+        /* Main Content Area */
+        main {
+            margin-left: 250px;
+            padding: 40px;
+            width: 100%;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .chart-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 10px;
+        }
+
+        .chart-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        .info-box {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            border-left: 5px solid var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h2>Dashboard</h2>
+    <a href="#populations">Populations</a>
+    <a href="#births">Births</a>
+    <a href="#deaths">Deaths</a>
+    <a href="#fertility">Fertility</a>
+    <a href="#expectancy">Life Expectancy</a>
+    <a href="#migrations">Migrations</a>
+    <a href="#emigrations">Emigrations</a>
+</nav>
+
+<main>
+    <h1>Plausibilitäts-Check: Demographie</h1>
+    <div class="info-box">
+        Diese Übersicht zeigt die Ratios (Migrant/Native) verschiedener Kennzahlen im Vergleich zum Gesamtdurchschnitt (rote Linie).
+    </div>
+
+    <!-- Populations -->
+    <section id="populations" class="chart-card">
+        <h3>Populations Ratio</h3>
+        <img src="populations.png" alt="Populations ratio">
+    </section>
+
+    <!-- Births -->
+    <section id="births" class="chart-card">
+        <h3>Births Ratio</h3>
+        <img src="births.png" alt="Births ratio">
+    </section>
+
+    <!-- Deaths -->
+    <section id="deaths" class="chart-card">
+        <h3>Deaths Ratio</h3>
+        <img src="deaths.png" alt="Deaths ratio">
+    </section>
+
+    <!-- Fertility -->
+    <section id="fertility" class="chart-card">
+        <h3>Fertility (calculated) Ratio</h3>
+        <img src="fertility_calculated.png" alt="Fertility calculated ratio">
+    </section>
+
+    <!-- Life Expectancy -->
+    <section id="expectancy" class="chart-card">
+        <h3>Life Expectancy Ratio</h3>
+        <img src="life_expectancy.png" alt="Life expectancy ratio">
+    </section>
+
+    <!-- Migrations -->
+    <section id="migrations" class="chart-card">
+        <h3>Migrations Ratio</h3>
+        <img src="migrations.png" alt="Migrations ratio">
+    </section>
+
+    <!-- Emigrations -->
+    <section id="emigrations" class="chart-card">
+        <h3>Emigrations Ratio</h3>
+        <img src="emigrations.png" alt="Emigrations ratio">
+    </section>
+
+    <footer>
+        Erstellt
+    </footer>
+</main>
+
+</body>
+</html>

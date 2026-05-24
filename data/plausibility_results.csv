@@ -1,0 +1,149 @@
+file_name,row_label,label,native_value,migrant_value
+Alex_ES.xlsx,pt,populations,85.93077427454894,14.069225725451057
+Alex_ES.xlsx,fc,fertility (calculated),1.0,1.0
+Alex_ES.xlsx,dt,deaths,1.033055316087904,0.29587797749730144
+Alex_ES.xlsx,mt,migrations,0.233355219021191,9.913713468994588
+Alex_ES.xlsx,et,emigrations,0.24951247533951676,4.833324676854113
+Alex_ES.xlsx,l,life expectancy,84.0,83.0
+Alex_FR.xlsx,pt,populations,78.2076307421692,21.792369257830803
+Alex_FR.xlsx,f,fertility (official),1.0,2.0
+Alex_FR.xlsx,fc,fertility (calculated),1.0,1.0
+Alex_FR.xlsx,dt,deaths,0.9869694331217952,0.853832751868788
+Alex_FR.xlsx,mt,migrations,0.2581116380706848,1.876315090246618
+Alex_FR.xlsx,et,emigrations,0.37394184886175835,0.3741814190396872
+Alex_FR.xlsx,l,life expectancy,83.0,83.0
+Alex_FR_befuellt_v3_IFR.xlsx,pt,populations,75.26422673847638,24.73577326152362
+Alex_FR_befuellt_v3_IFR.xlsx,bt,births,18284.290904599915,19762.53507728021
+Alex_FR_befuellt_v3_IFR.xlsx,f,fertility (official),1.0,2.0
+Alex_FR_befuellt_v3_IFR.xlsx,fc,fertility (calculated),1.0,1.0
+Alex_FR_befuellt_v3_IFR.xlsx,dt,deaths,1.0218973061797734,0.6663675818333901
+Alex_FR_befuellt_v3_IFR.xlsx,mt,migrations,0.16434895199068233,1.847993302753435
+Alex_FR_befuellt_v3_IFR.xlsx,et,emigrations,0.10776376502279716,0.6089510409396428
+Alex_FR_befuellt_v3_IFR.xlsx,l,life expectancy,83.0,83.0
+Alex_FR_Final.xlsx,pt,populations,80.09003922931052,19.90996077068948
+Alex_FR_Final.xlsx,f,fertility (official),1.0,2.0
+Alex_FR_Final.xlsx,fc,fertility (calculated),29.0,17.0
+Alex_FR_Final.xlsx,dt,deaths,0.004274585645344949,0.0027846444670641267
+Alex_FR_Final.xlsx,mt,migrations,0.23899904205903086,1.9474116620619457
+Alex_FR_Final.xlsx,et,emigrations,0.3546170947277098,0.3547113566962338
+Alex_FR_Final.xlsx,l,life expectancy,83.0,83.0
+Alex_FR_Neu.xlsx,pt,populations,80.09003922931052,19.90996077068948
+Alex_FR_Neu.xlsx,f,fertility (official),1.0,2.0
+Alex_FR_Neu.xlsx,fc,fertility (calculated),29.0,17.0
+Alex_FR_Neu.xlsx,dt,deaths,0.004274585645344949,0.0027846444670641267
+Alex_FR_Neu.xlsx,mt,migrations,0.23899904205903086,1.9474116620619457
+Alex_FR_Neu.xlsx,et,emigrations,0.3546170947277098,0.3547113566962338
+Alex_FR_Neu.xlsx,l,life expectancy,83.0,83.0
+Alex_GB.xlsx,pt,populations,81.9999975247167,18.00000247528329
+Alex_GB.xlsx,bt,births,19641.060493885216,19640.958406127575
+Alex_GB.xlsx,fc,fertility (calculated),1.0,1.0
+Alex_GB.xlsx,dt,deaths,0.8217593273069965,0.821760359510863
+Alex_GB.xlsx,mt,migrations,0.13701634109980398,4.615835047016384
+Alex_GB.xlsx,et,emigrations,0.23547484364287508,1.768692004044561
+Alex_GB.xlsx,l,life expectancy,81.0,81.0
+Alex_GB_gecheckt.xlsx,pt,populations,81.9999975247167,18.00000247528329
+Alex_GB_gecheckt.xlsx,bt,births,13528.721267595713,31625.896663017807
+Alex_GB_gecheckt.xlsx,f,fertility (official),1.0,2.0
+Alex_GB_gecheckt.xlsx,fc,fertility (calculated),1.0,1.0
+Alex_GB_gecheckt.xlsx,dt,deaths,0.8217593273069965,0.821760359510863
+Alex_GB_gecheckt.xlsx,l,life expectancy,81.0,81.0
+Alex_IE.xlsx,pt,populations,100.0,0.0
+Alex_IE.xlsx,bt,births,14520.009334265793,
+Alex_IE.xlsx,fc,fertility (calculated),1.0,0.0
+Alex_IE.xlsx,dt,deaths,0.4602089873845104,
+Alex_IE.xlsx,mt,migrations,0.5582010208831667,
+Alex_IE.xlsx,et,emigrations,0.7051066325163178,
+Alex_IE.xlsx,l,life expectancy,83.0,0.0
+Alex_IE_gecheckt.xlsx,pt,populations,83.72295349344623,16.277046506553777
+Alex_IE_gecheckt.xlsx,bt,births,17279.22869054205,34509.09090909091
+Alex_IE_gecheckt.xlsx,f,fertility (official),1.0,1.0
+Alex_IE_gecheckt.xlsx,dt,deaths,0.5496807842792302,0.9419245920090039
+Alex_IE_gecheckt.xlsx,mt,migrations,0.6667239957401435,8.35936972425436
+Alex_IE_gecheckt.xlsx,et,emigrations,0.8421903469656181,2.222172200337648
+Alex_IE_gecheckt.xlsx,l,life expectancy,83.0,83.0
+Alex_IT.xlsx,pt,populations,91.81990321259883,8.18009678740117
+Alex_IT.xlsx,bt,births,12635.22962138926,19087.07932982473
+Alex_IT.xlsx,f,fertility (official),1.0,1.0
+Alex_IT.xlsx,fc,fertility (calculated),1.0,1.0
+Alex_IT.xlsx,dt,deaths,1.1918269298435864,0.2070938001674262
+Alex_IT.xlsx,mt,migrations,0.09328277534655459,5.534144019271905
+Alex_IT.xlsx,et,emigrations,0.193292559778726,0.8973557091078255
+Alex_IT.xlsx,l,life expectancy,83.0,83.0
+Alex_PT.xlsx,pt,populations,85.6395031087102,14.360496891289797
+Alex_PT.xlsx,bt,births,11495.590730933503,20972.338881170006
+Alex_PT.xlsx,fc,fertility (calculated),1.0,0.0
+Alex_PT.xlsx,dt,deaths,1.1108813076435264,0.3647727118140106
+Alex_PT.xlsx,mt,migrations,0.4297880041286414,3.9050308317478577
+Alex_PT.xlsx,et,emigrations,0.2568017541729063,0.5396122694744643
+Alex_PT.xlsx,l,life expectancy,82.0,161.0
+Matthias_AT.xlsx,pt,populations,74.78269414494336,25.21730585505664
+Matthias_AT.xlsx,bt,births,13950.366295257014,24764.206529797182
+Matthias_AT.xlsx,fc,fertility (calculated),1.0,1.0
+Matthias_AT.xlsx,dt,deaths,0.9410789060264324,0.9410761217358925
+Matthias_AT.xlsx,mt,migrations,0.14038217825251564,5.309903489363913
+Matthias_AT.xlsx,et,emigrations,0.21275601679622028,2.3237457730592874
+Matthias_AT.xlsx,l,life expectancy,82.0,82.0
+Matthias_AT_befuellt_v2_IFR.xlsx,pt,populations,71.77713509516416,28.222864904835845
+Matthias_AT_befuellt_v2_IFR.xlsx,bt,births,14885.541365292143,20741.402505992297
+Matthias_AT_befuellt_v2_IFR.xlsx,f,fertility (official),1.0,1.0
+Matthias_AT_befuellt_v2_IFR.xlsx,fc,fertility (calculated),1.0,1.0
+Matthias_AT_befuellt_v2_IFR.xlsx,dt,deaths,1.1066733964543793,0.5944022403058576
+Matthias_AT_befuellt_v2_IFR.xlsx,mt,migrations,0.11677656094921515,4.798019198548994
+Matthias_AT_befuellt_v2_IFR.xlsx,et,emigrations,0.21802633827241583,2.074494253418227
+Matthias_AT_befuellt_v2_IFR.xlsx,l,life expectancy,82.0,82.0
+Matthias_CH.xlsx,pt,populations,72.60103795933037,27.39896204066963
+Matthias_CH.xlsx,bt,births,81214.91527513062,99668.18373539056
+Matthias_CH.xlsx,fc,fertility (calculated),1.0,1.0
+Matthias_CH.xlsx,dt,deaths,0.9701054961383418,0.3304584723181047
+Matthias_CH.xlsx,mt,migrations,0.35903962492967356,5.7534049924835315
+Matthias_CH.xlsx,et,emigrations,0.43299938321213927,3.775210815972334
+Matthias_CH.xlsx,l,life expectancy,84.0,84.0
+Matthias_DE.xlsx,pt,populations,68.86036477029624,31.13963522970376
+Matthias_DE.xlsx,bt,births,10816.073391973612,15534.1809905031
+Matthias_DE.xlsx,f,fertility (official),1.0,1.0
+Matthias_DE.xlsx,fc,fertility (calculated),1.0,2.0
+Matthias_DE.xlsx,dt,deaths,1.6855843996278939,0.17170470423847228
+Matthias_DE.xlsx,mt,migrations,0.144471942850122,3.9716076696165192
+Matthias_DE.xlsx,et,emigrations,0.26090955364821933,1.2876067380841485
+Matthias_DE.xlsx,l,life expectancy,81.0,81.0
+Matthias_DE_v4_Claude_befuellt.xlsx,pt,populations,69.00998840089555,30.990011599104452
+Matthias_DE_v4_Claude_befuellt.xlsx,bt,births,15193.014832136425,17165.64610436694
+Matthias_DE_v4_Claude_befuellt.xlsx,fc,fertility (calculated),1.0,1.0
+Matthias_DE_v4_Claude_befuellt.xlsx,dt,deaths,1.4970756932589064,0.5571152383310851
+Matthias_DE_v4_Claude_befuellt.xlsx,mt,migrations,0.1499204807164697,3.719297099530566
+Matthias_DE_v4_Claude_befuellt.xlsx,et,emigrations,0.2349289943980031,1.270995390602661
+Matthias_DE_v4_Claude_befuellt.xlsx,l,life expectancy,80.0,80.0
+Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,pt,populations,69.00998840089555,30.990011599104452
+Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,f,fertility (official),1.0,1.0
+Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,fc,fertility (calculated),1.0,1.0
+Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,dt,deaths,1.4970756932589064,0.5571152383310851
+Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,mt,migrations,0.1499204807164697,3.719297099530566
+Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,et,emigrations,0.2349289943980031,1.270995390602661
+Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,l,life expectancy,80.0,80.0
+Matthias_DK.xlsx,pt,populations,83.22099879464346,16.779001205356543
+Matthias_DK.xlsx,bt,births,18250.953885714443,26460.42000039511
+Matthias_DK.xlsx,fc,fertility (calculated),1.0,1.0
+Matthias_DK.xlsx,dt,deaths,1.0827654710765655,0.3845560395475532
+Matthias_DK.xlsx,mt,migrations,0.37618402546022417,5.94261727574488
+Matthias_DK.xlsx,et,emigrations,0.2695347374957798,4.389655759043199
+Matthias_DK.xlsx,l,life expectancy,82.0,82.0
+Matthias_NL.xlsx,pt,populations,83.23181866397222,16.76818133602778
+Matthias_NL.xlsx,bt,births,14936.986710069606,34665.374108825235
+Matthias_NL.xlsx,f,fertility (official),1.0,1.0
+Matthias_NL.xlsx,fc,fertility (calculated),1.0,0.0
+Matthias_NL.xlsx,dt,deaths,0.9901273580203872,0.7754684522855382
+Matthias_NL.xlsx,mt,migrations,0.28272706806883385,5.9050023879127
+Matthias_NL.xlsx,et,emigrations,0.3124506645893886,2.202630504799787
+Matthias_NL.xlsx,l,life expectancy,82.0,82.0
+Matthias_NO.xlsx,pt,populations,78.22017272630345,21.779827273696558
+Matthias_NO.xlsx,fc,fertility (calculated),1.0,1.0
+Matthias_NO.xlsx,dt,deaths,0.9077274055253328,0.2888291648920807
+Matthias_NO.xlsx,mt,migrations,0.1553695997193851,4.382615421519241
+Matthias_NO.xlsx,et,emigrations,0.19137790730166693,1.7640608401501912
+Matthias_NO.xlsx,l,life expectancy,83.0,83.0
+Matthias_SE.xlsx,pt,populations,72.30786899268837,27.692131007311627
+Matthias_SE.xlsx,fc,fertility (calculated),1.0,1.0
+Matthias_SE.xlsx,dt,deaths,1.0240372967084497,0.46508064598506593
+Matthias_SE.xlsx,mt,migrations,0.2350082791452907,3.392000435832218
+Matthias_SE.xlsx,et,emigrations,0.34660526354909704,0.9667303390297967
+Matthias_SE.xlsx,l,life expectancy,84.0,84.0

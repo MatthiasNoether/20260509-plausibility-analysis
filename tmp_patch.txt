@@ -1,0 +1,43 @@
+*** Begin Patch
+*** Update File: c:\git\20260905-\20260509-plausibility-analysis\gui.py
+@@
+-if page in page_map:
+-    safe_label, title = page_map[page]
+-    show_side_by_side(safe_label, title, img_width=450)
+-
+-
+-# Content logic for Natives
+-if native_page == "Populations (Natives)":
+-    st.subheader("Populations (Natives)")
+-    img_path = os.path.join(base_dir, "plots", "populations_native.png")
+-    st.image(img_path, use_container_width=True)
+-elif native_page == "Births (Natives)":
+-    st.subheader("Births (Natives)")
+-    img_path = os.path.join(base_dir, "plots", "births_native.png")
+-    st.image(img_path, use_container_width=True)
+-elif native_page == "Deaths (Natives)":
+-    st.subheader("Deaths (Natives)")
+-    img_path = os.path.join(base_dir, "plots", "deaths_native.png")
+-    st.image(img_path, use_column_width=True)
+-elif native_page == "Fertility (Natives)":
+-    st.subheader("Fertility (calculated) (Natives)")
+-    img_path = os.path.join(base_dir, "plots", "fertility_calculated_native.png")
+-    st.image(img_path, use_column_width=True)
+-elif native_page == "Life Expectancy (Natives)":
+-    st.subheader("Life Expectancy (Natives)")
+-    img_path = os.path.join(base_dir, "plots", "life_expectancy_native.png")
+-    st.image(img_path, use_column_width=True)
+-elif native_page == "Migrations (Natives)":
+-    st.subheader("Migrations (Natives)")
+-    img_path = os.path.join(base_dir, "plots", "migrations_native.png")
+-    st.image(img_path, use_column_width=True)
+-elif native_page == "Emigrations (Natives)":
+-    st.subheader("Emigrations (Natives)")
+-    img_path = os.path.join(base_dir, "plots", "emigrations_native.png")
+-    st.image(img_path, use_column_width=True)
++if page in page_map:
++    safe_label, title = page_map[page]
++    show_side_by_side(safe_label, title, img_width=450)
++
++# Native-only displays removed — both migrant and native plots are shown side-by-side above
+*** End Patch
