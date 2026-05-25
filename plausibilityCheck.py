@@ -4,6 +4,32 @@ from pathlib import Path
 from typing import List, Optional, Tuple
 import matplotlib.pyplot as plt
 
+
+def infer_country_code(file_name: str) -> str:
+    """Extract a country code from the filename."""
+    file_name = Path(file_name).name
+    if match := re.match(r"^([A-Za-z]{2})_[0-9]{8}_", file_name):
+        return match.group(1).upper()
+    basename = Path(file_name).stem
+    if matches := re.findall(r"(?:^|_)([A-Za-z]{2})(?=_|$)", basename):
+        return matches[0].upper()
+    return basename[:2].upper()
+
+
+def sort_files_by_country(file_names: List[str]) -> List[str]:
+    grouped = {}
+    for name in file_names:
+        country = infer_country_code(name)
+        grouped.setdefault(country, []).append(name)
+    ordered = []
+    for country in sorted(grouped):
+        ordered.extend(sorted(grouped[country]))
+    return ordered
+
+
+def build_y_labels(file_names: List[str]) -> List[str]:
+    return [f"{infer_country_code(name):<3} {name}" for name in file_names]
+
 # Data class for reading and comparing cell values from an Excel sheet
 class CountrySheet:
     def __init__(self, file_path: str | Path, country_code: str = "pt") -> None:
@@ -189,9 +215,7 @@ if __name__ == "__main__":
                         # Normalization
                         if row_label == "pt":
                             native_value = 100.0*native_value/(native_count + migrant_count)
-                            print(f"Debug: native_value for {file_path.name} (pt) = {native_value}")
                             migrant_value = 100.0*migrant_value/(native_count + migrant_count)
-                            print(f"Debug: migrant_value for {file_path.name} (pt) = {migrant_value}")
                         elif row_label == "bt":
                             try:
                                 native_value = 1000000*native_value/native_females
@@ -322,7 +346,8 @@ if __name__ == "__main__":
         "emigrations",
         "life expectancy",
     ]
-    all_file_names = result_df["file_name"].drop_duplicates().tolist()
+    all_file_names = sort_files_by_country(result_df["file_name"].drop_duplicates().tolist())
+    y_labels = build_y_labels(all_file_names)
 
     for label in labels_to_plot:
         df_label = result_df[result_df["label"] == label].copy()
@@ -333,8 +358,8 @@ if __name__ == "__main__":
         mean_ratio = ratio_series.mean()
         plt.figure(figsize=(14, max(6, len(all_file_names) * 0.2)))
         bar_colors = ["steelblue" if not pd.isna(val) else "lightgray" for val in ratio_series]
-        plt.barh(all_file_names, ratio_series.fillna(0), color=bar_colors)
-        for idx, (val, fname) in enumerate(zip(ratio_series, all_file_names)):
+        plt.barh(y_labels, ratio_series.fillna(0), color=bar_colors)
+        for idx, val in enumerate(ratio_series):
             if pd.isna(val):
                 plt.text(0, idx, "missing", va="center", ha="left", color="gray", fontsize=9)
         plt.axvline(
@@ -344,9 +369,11 @@ if __name__ == "__main__":
             linewidth=1.8,
             label=f"mean = {mean_ratio:.4f}",
         )
-        plt.gca().invert_yaxis()
+        ax = plt.gca()
+        ax.set_yticklabels(y_labels, fontfamily="monospace")
+        ax.invert_yaxis()
         plt.xlabel("Migrant value")
-        plt.ylabel("file_name")
+        plt.ylabel("Country / file_name")
         plt.title(f"{label.capitalize()} (Migrant)")
         plt.legend()
         plt.tight_layout()
@@ -358,7 +385,8 @@ if __name__ == "__main__":
 
     # Native plots
     # ------------------------------------------------------------
-    native_all_file_names = native_df["file_name"].drop_duplicates().tolist()
+    native_all_file_names = sort_files_by_country(native_df["file_name"].drop_duplicates().tolist())
+    native_y_labels = build_y_labels(native_all_file_names)
     for label in labels_to_plot:
         df_label = native_df[native_df["label"] == label].copy()
         native_series = (
@@ -368,8 +396,8 @@ if __name__ == "__main__":
         mean_native = native_series.mean()
         plt.figure(figsize=(14, max(6, len(native_all_file_names) * 0.2)))
         bar_colors = ["darkorange" if not pd.isna(val) else "lightgray" for val in native_series]
-        plt.barh(native_all_file_names, native_series.fillna(0), color=bar_colors)
-        for idx, (val, fname) in enumerate(zip(native_series, native_all_file_names)):
+        plt.barh(native_y_labels, native_series.fillna(0), color=bar_colors)
+        for idx, val in enumerate(native_series):
             if pd.isna(val):
                 plt.text(0, idx, "missing", va="center", ha="left", color="gray", fontsize=9)
         plt.axvline(
@@ -379,9 +407,11 @@ if __name__ == "__main__":
             linewidth=1.8,
             label=f"mean = {mean_native:.4f}",
         )
-        plt.gca().invert_yaxis()
+        ax = plt.gca()
+        ax.set_yticklabels(native_y_labels, fontfamily="monospace")
+        ax.invert_yaxis()
         plt.xlabel("Native value")
-        plt.ylabel("file_name")
+        plt.ylabel("Country / file_name")
         plt.title(f"{label.capitalize()} (Native)")
         plt.legend()
         plt.tight_layout()
