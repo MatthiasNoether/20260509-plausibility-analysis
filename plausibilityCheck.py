@@ -1,3 +1,4 @@
+import re
 import pandas as pd
 from pathlib import Path
 from typing import List, Optional, Tuple
@@ -9,6 +10,49 @@ class CountrySheet:
         """Initialize the sheet with file path and prepare error list."""
         self.FilePath: Path = Path(file_path)
         self.errors: List[str] = []
+        self._sheet_name: Optional[str | int] = None
+        self._cached_df: Optional[pd.DataFrame] = None
+
+    def _looks_like_new_format(self) -> bool:
+        return bool(re.match(r"^[A-Za-z]{2}_[0-9]{8}_", self.FilePath.name))
+
+    def _load_data_frame(self) -> Optional[pd.DataFrame]:
+        if self._cached_df is not None:
+            return self._cached_df
+
+        try:
+            xls = pd.ExcelFile(self.FilePath)
+        except Exception as exc:
+            self.errors.append(f"File could not be read: {exc}")
+            return None
+
+        candidates = []
+        if self._looks_like_new_format() and "export" in xls.sheet_names:
+            candidates.append("export")
+        if "export" in xls.sheet_names and "export" not in candidates:
+            candidates.append("export")
+        if "data" in xls.sheet_names:
+            candidates.append("data")
+        candidates.extend(xls.sheet_names)
+
+        for sheet in candidates:
+            try:
+                df = pd.read_excel(self.FilePath, sheet_name=sheet)
+            except Exception:
+                continue
+            first_col = df.iloc[:, 0].astype(str).str.strip().str.lower()
+            if (first_col == "pt").any():
+                self._sheet_name = sheet
+                self._cached_df = df
+                return df
+
+        try:
+            self._sheet_name = xls.sheet_names[0]
+            self._cached_df = pd.read_excel(self.FilePath, sheet_name=0)
+            return self._cached_df
+        except Exception as exc:
+            self.errors.append(f"File could not be read: {exc}")
+            return None
 
     def migrant_native_ratio(
         self,
@@ -16,27 +60,35 @@ class CountrySheet:
         col1: str = "na",
         col2: str = "ma",
         normalize: bool = False
-    ) -> Optional[Tuple[float, int, int]]:
+    ) -> Optional[Tuple[float, float, float]]:
         """Compare migrant and native values in a specific row and return the ratio.
 
-        Returns a tuple(ratio, native_count, migrant_count) or None if an error occurred.
+        Returns a tuple(ratio, native_value, migrant_value) or None if an error occurred.
         """
-        # Read Excel file
-        try:
-            df = pd.read_excel(self.FilePath)
-        except Exception as exc:
-            self.errors.append(f"File could not be read: {exc}")
+        df = self._load_data_frame()
+        if df is None:
             return None
 
-        # Find the target row by first column value
-        search_row = df[df.iloc[:, 0] == row]
+        cleaned_first_col = df.iloc[:, 0].astype(str).str.strip()
+        search_row = df[cleaned_first_col == str(row).strip()]
         if search_row.empty:
             self.errors.append(f"Row with '{row}' not found")
             return None
 
-        # Find columns matching the specified prefixes
-        native_col = next((col for col in df.columns if str(col).startswith(col1)), None)
-        migrant_col = next((col for col in df.columns if str(col).startswith(col2)), None)
+        def find_column(prefix: str):
+            prefix_lower = prefix.lower()
+            for col in df.columns:
+                if str(col).strip().lower().startswith(prefix_lower):
+                    return col
+            if not df.empty:
+                header_codes = [str(x).strip().lower() for x in df.iloc[0].tolist()]
+                for idx, code in enumerate(header_codes):
+                    if code and code != "nan" and code.startswith(prefix_lower):
+                        return df.columns[idx]
+            return None
+
+        native_col = find_column(col1)
+        migrant_col = find_column(col2)
 
         if native_col is None:
             self.errors.append(f"No column with prefix '{col1}' found")
@@ -45,26 +97,28 @@ class CountrySheet:
         if native_col is None or migrant_col is None:
             return None
 
-        # Extract and convert values locally
         try:
-            native_count = int(search_row[native_col].iloc[0])
+            native_value = float(search_row[native_col].iloc[0])
+            if pd.isna(native_value):
+                raise ValueError("native value is missing")
         except Exception as exc:
-            self.errors.append(f"Native count could not be read or converted: {exc}")
+            self.errors.append(f"Native value could not be read or converted: {exc}")
             return None
 
         try:
-            migrant_count = int(search_row[migrant_col].iloc[0])
+            migrant_value = float(search_row[migrant_col].iloc[0])
+            if pd.isna(migrant_value):
+                raise ValueError("migrant value is missing")
         except Exception as exc:
-            self.errors.append(f"Migrant count could not be read or converted: {exc}")
+            self.errors.append(f"Migrant value could not be read or converted: {exc}")
             return None
 
-        # Calculate migrant/native ratio
-        if native_count == 0:
-            self.errors.append("Native count is 0, ratio cannot be calculated")
+        if native_value == 0:
+            self.errors.append("Native value is 0, ratio cannot be calculated")
             return None
 
-        ratio = migrant_count / native_count
-        return ratio, native_count, migrant_count
+        ratio = migrant_value / native_value
+        return ratio, native_value, migrant_value
 
     def print_summary(self) -> None:
         """Print a formatted summary of errors."""
