@@ -1,0 +1,76 @@
+file_name,row_label,label,native_value
+AT_20260520_V3_Claude.xlsx,pt,populations,71.77368839886604
+AT_20260520_V3_Claude.xlsx,bt,births,13639.623692765745
+AT_20260520_V3_Claude.xlsx,f,fertility (official),1.216
+AT_20260520_V3_Claude.xlsx,dt,deaths,1.1067265408194507
+AT_20260520_V3_Claude.xlsx,mt,migrations,-0.10241352340241039
+AT_20260520_V3_Claude.xlsx,l,life expectancy,82.10439093986089
+AT_20260525_Matthias_AT.xlsx,pt,populations,74.78269414494336
+AT_20260525_Matthias_AT.xlsx,bt,births,13088.156755331218
+AT_20260525_Matthias_AT.xlsx,dt,deaths,0.9410891224239115
+AT_20260525_Matthias_AT.xlsx,mt,migrations,-0.07237383854370463
+AT_20260525_Matthias_AT.xlsx,l,life expectancy,82.11436156258577
+CH_20260525_Matthias_CH.xlsx,pt,populations,72.60103795933037
+CH_20260525_Matthias_CH.xlsx,bt,births,13485.39479797836
+CH_20260525_Matthias_CH.xlsx,dt,deaths,0.9701054961383418
+CH_20260525_Matthias_CH.xlsx,mt,migrations,-0.07396432369964366
+CH_20260525_Matthias_CH.xlsx,l,life expectancy,84.19746683262467
+CH_20260526_V1_1_Claude.xlsx,pt,populations,60.51129656086617
+CH_20260526_V1_1_Claude.xlsx,bt,births,16822.864325246388
+CH_20260526_V1_1_Claude.xlsx,f,fertility (official),1.2
+CH_20260526_V1_1_Claude.xlsx,dt,deaths,0.9282631856188589
+CH_20260526_V1_1_Claude.xlsx,mt,migrations,-0.15407635165545447
+CH_20260526_V1_1_Claude.xlsx,l,life expectancy,84.48830067949083
+DE_20260522_V1.1_Claude.xlsx,pt,populations,69.76143226339767
+DE_20260522_V1.1_Claude.xlsx,bt,births,15025.12748427815
+DE_20260522_V1.1_Claude.xlsx,f,fertility (official),1.23
+DE_20260522_V1.1_Claude.xlsx,dt,deaths,1.4928444083080332
+DE_20260522_V1.1_Claude.xlsx,mt,migrations,-0.08421554103972932
+DE_20260522_V1.1_Claude.xlsx,l,life expectancy,81.05988774536121
+DE_20260525_Matthias_DE.xlsx,pt,populations,68.86036477029626
+DE_20260525_Matthias_DE.xlsx,bt,births,1563.6682242990655
+DE_20260525_Matthias_DE.xlsx,f,fertility (official),0.658314606741573
+DE_20260525_Matthias_DE.xlsx,dt,deaths,1.6855843996278934
+DE_20260525_Matthias_DE.xlsx,mt,migrations,-0.11643796184157407
+DE_20260525_Matthias_DE.xlsx,l,life expectancy,81.24985694978321
+DE_20260525_Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,pt,populations,69.00998840089555
+DE_20260525_Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,bt,births,1543.535282223703
+DE_20260525_Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,f,fertility (official),0.6002857516746349
+DE_20260525_Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,dt,deaths,1.4970756932589064
+DE_20260525_Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,mt,migrations,-0.08500920720397828
+DE_20260525_Matthias_DE_v5_Claude_DE_befuellt_neue_vorlage.xlsx,l,life expectancy,80.88281075353711
+ES_20260525_Alex_ES.xlsx,pt,populations,85.93077427454892
+ES_20260525_Alex_ES.xlsx,bt,births,2105.4565927060403
+ES_20260525_Alex_ES.xlsx,dt,deaths,1.0330553160879046
+ES_20260525_Alex_ES.xlsx,mt,migrations,-0.0161572563183258
+ES_20260525_Alex_ES.xlsx,l,life expectancy,84.07200427626037
+ES_20260526_V1_Claude.xlsx,pt,populations,75.47375241536301
+ES_20260526_V1_Claude.xlsx,bt,births,0.05727293342625305
+ES_20260526_V1_Claude.xlsx,f,fertility (official),1.082779109213381
+ES_20260526_V1_Claude.xlsx,dt,deaths,1.0730794566484694
+ES_20260526_V1_Claude.xlsx,mt,migrations,-0.08216464191055389
+ES_20260526_V1_Claude.xlsx,l,life expectancy,84.00039980234627
+FR_20260522_V1.1_Claude.xlsx,pt,populations,78.20844451283779
+FR_20260522_V1.1_Claude.xlsx,bt,births,17554.02525233752
+FR_20260522_V1.1_Claude.xlsx,f,fertility (official),1.7
+FR_20260522_V1.1_Claude.xlsx,dt,deaths,0.9889291303591605
+FR_20260522_V1.1_Claude.xlsx,mt,migrations,-0.13086517469832665
+FR_20260522_V1.1_Claude.xlsx,l,life expectancy,82.94608802418918
+FR_20260525_Alex_FR_Neu.xlsx,pt,populations,79.23305608187694
+FR_20260525_Alex_FR_Neu.xlsx,bt,births,17139.04826397957
+FR_20260525_Alex_FR_Neu.xlsx,f,fertility (official),0.8255217703474318
+FR_20260525_Alex_FR_Neu.xlsx,dt,deaths,0.0022061126425460017
+FR_20260525_Alex_FR_Neu.xlsx,mt,migrations,-0.05965845378954585
+FR_20260525_Alex_FR_Neu.xlsx,l,life expectancy,42.92353318613832
+NL_20260525_Matthias_NL.xlsx,pt,populations,83.2318140512647
+NL_20260525_Matthias_NL.xlsx,bt,births,6061.44961201075
+NL_20260525_Matthias_NL.xlsx,f,fertility (official),0.693009529100593
+NL_20260525_Matthias_NL.xlsx,dt,deaths,0.9901298579245447
+NL_20260525_Matthias_NL.xlsx,mt,migrations,-0.029727591627613972
+NL_20260525_Matthias_NL.xlsx,l,life expectancy,82.09976779106084
+NL_20260526_V1.1_Claude.xlsx,pt,populations,71.50150509016906
+NL_20260526_V1.1_Claude.xlsx,bt,births,16523.829741934205
+NL_20260526_V1.1_Claude.xlsx,f,fertility (official),1.472
+NL_20260526_V1.1_Claude.xlsx,dt,deaths,1.1150005457404955
+NL_20260526_V1.1_Claude.xlsx,mt,migrations,-0.09137819940365448
+NL_20260526_V1.1_Claude.xlsx,l,life expectancy,81.90275916471936
